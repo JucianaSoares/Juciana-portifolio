@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juciana de Souza Soares | Portfólio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Caminho relativo para o ícone de 192px -->
+<link rel="icon" type="image/png" sizes="192x192" href="icon/android-chrome-192x192.png">
+
+      <!--      icon     -->   
+  <link rel="icon" href="icon/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  
+</head>
+<body>
+    <!-- O  retângulo do topo com o menu -->
+    <header>
+        <h2>Juciana de Souza Soares</h2>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+<li><a href="#formacao">Formação e Certificações</a></li>              
+            </ul>
+        </nav>
+      <button id="btn-tema" class="btn-tema">🌙</button>
+
+    </header>
+
+   <!--  Seção Principal -->
+    <main>
+        <section class="hero">
+
+          <div class="hero-imagem">
+    <div class="caixa-foto"></div>
+          </div>
+          
+            <div class="hero-conteudo">
+                <h1>Olá, eu sou a <span class="destaque">Juciana de Souza Soares</span></h1>
+                <p>Estudante de Desenvolvimento Front-End focada em criar interfaces modernas, limpas e eficientes.</p>
+                <a href="#projetos" class="botao-hero brilho-ativo">Ver Projetos</a>
+            </div>
+        
+        </section>
+
+        <!--  Seção: Sobre Mim -->
+        <section id="sobre" class="sobre-mim">
+            <div class="sobre-conteudo">
+                <h2>Sobre <span class="destaque">Mim</span></h2>
+                
+                <div class="sobre-texto">
+                    <p>
+                        Olá! Meu nome é Juciana de Souza Soares. Minha trajetória profissional começou na área de <strong>Logística</strong>, atuando como operadora. Embora sempre tenha sido apaixonada por tecnologia, a vida e a falta de oportunidades nunca me permitiram fazer um curso de ponta antes.
+                    </p>
+                    <p>
+                        Hoje, estou transformando essa paixão em realidade como estudante de desenvolvimento Front-End. Por não possuir um computador, encontrei nos desafios a minha maior força: programo, gerencio repositórios via Git e realizo tarefas técnicas <strong>diretamente pelo celular</strong>, usando o Termux e o Acode.
+                    </p>
+                    <p>
+                        Essa rotina me deu uma disciplina gigante e uma capacidade única de adaptação e resolução de problemas. Estou focada em dominar tecnologias web, construir interfaces modernas, focada em aprender outras linguagens de programação e conquistar minha primeira oportunidade no mercado de tecnologia, provando que a determinação é a nossa melhor ferramenta de trabalho. 
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!--  Seção: Habilidades -->
+        <section id="habilidades" class="habilidades">
+            <h2>Minhas <span class="destaque">Habilidades</span></h2>
+            <p class="subtitulo-secao">As tecnologias e ferramentas que utilizo no meu dia a dia de estudos e projetos.</p>
+            
+            <div class="cards-habilidades">
+                <!-- Card 1 -->
+                <div class="card">
+                    <h3>HTML5</h3>
+                    <p>Estruturação de páginas web modernas e semânticas.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="card">
+                    <h3>CSS3</h3>
+                    <p>Estilização, layouts com Flexbox, design responsivo e animações.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="card">
+                    <h3>Git</h3>
+                    <p>Controle de versão, gerenciamento de histórico e commits.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="card">
+                    <h3>GitHub</h3>
+                    <p>Hospedagem de código, portfólio de projetos e colaboração.</p>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="card">
+                    <h3>Termux</h3>
+                    <p>Uso do terminal Linux no celular para tarefas técnicas e comandos Git.</p>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="card">
+                    <h3>React</h3>
+                    <p>Estudando os conceitos para criação de interfaces dinâmicas e baseadas em componentes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--  Seção: Projetos -->
+        <section id="projetos" class="projetos">
+            <h2>Meus <span class="destaque">Projetos</span></h2>
+            <p class="subtitulo-secao">Aqui estão algumas das aplicações que desenvolvi aplicando meus conhecimentos.</p>
+            
+            <div class="grade-projetos">
+                <!-- Projeto 1: Jogo da Memória -->
+                <div class="card-projeto">
+                    <div class="capa-projeto">
+              <img src="./imagens/jogo-memoria.jpg" alt="Jogo da Memória de Emojis">
+          
+                        <span class="emoji-capa">🧠</span>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Jogo da Memória de Emojis</h3>
+                        <p>Um jogo interativo com sistema de ranking dinâmico, troca de temas visuais, salvamento de dados via arquivo JSON e opção de exportar o placar.</p>
+                        <div class="tags-tecnologias">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>JSON</span>
+                        </div>
+                        <a href="https://github.com/JucianaSoares/Jogo-da-mem-ria-de-emojis" target="_blank" class="botao-projeto">Ver Código no GitHub</a>
+                    </div>
+                </div>
+                            <!-- Projeto 2: Landing Page do Multiverso -->
+                <div class="card-projeto">
+                    <div class="capa-projeto">
+
+<img src="./imagens/spiderman-multiverses.jpg" alt="Landing spiderman-multiverses">
+                      
+                      <span class="emoji-capa">🌌</span>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Landing Page do spiderman Multiverso</h3>
+                        <p>Uma página web moderna com design imersivo, animações fluidas e totalmente adaptada para funcionar perfeitamente em telas de celulares e computadores.</p>
+                        <div class="tags-tecnologias">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Flexbox</span>
+                            <span>Responsividade</span>
+                        </div>
+                        <a href="https://github.com/JucianaSoares/multiverse-spiderman-landingpage" target="_blank" class="botao-projeto">Ver Código no GitHub</a>
+                    </div>
+                </div>
+              <!-- Projeto: Detona Ralph Game -->
+<div class="card-projeto">
+    <div class="capa-projeto">
+        <img src="./imagens/detona-ralph.jpg" alt="Detona Ralph Game">
+        <span class="emoji-capa">🔨</span>
+    </div>
+    <div class="projeto-info">
+        <h3>Detona Ralph Game</h3>
+        <p>Um jogo de arcade responsivo baseado no conceito "Whac-A-Mole", com sistema de ranking, níveis de dificuldade e interface adaptável para dispositivos móveis e desktop.</p>
+        <div class="tags-tecnologias">
+            <span>HTML5</span>
+            <span>CSS Grid</span>
+            <span>JavaScript</span>
+            <span>PWA</span>
+        </div>
+        <a href="https://github.com/JucianaSoares/Detona-Ralph-Game-" target="_blank" class="botao-projeto">Ver Código no GitHub</a>
+    </div>
+</div>
+
+            </div>
+        </section>
+
+      <section class="formacao" id="formacao">
+    <h2>Formação e Certificações</h2>
+    <div class="lista-cursos">
+        <div class="item-curso certificado-destaque" >
+            <h3>Nexa - Fundamentos de IA Generativa com Bedrock</h3>
+            <p>Digital Innovation One (DIO) - 9 horas</p>
+          <div class="caixa-certificado">
+        <img src="./imagens/OFH8OTY2.jpg" alt="Certificado IA Generativa">
+    </div>
+    
+    <a href="./imagens/OFH8OTY2.jpg" target="_blank" class="botao-projeto">Abrir Certificado</a>
+        </div>
+        <div class="item-curso"data-aos="zoom-in">
+            <h3>Front-End do Zero</h3>
+            <p>Ri Happy / DIO - Em curso</p>
+        </div>
+        <div class="item-curso">
+            <h3>Desenvolvedor Web</h3>
+            <p>Faetec - Em curso</p>
+        </div>
+      <div class="item-curso">
+            <h3>AI React Front-End</h3>
+            <p>Santander 2026 / DIO - Em curso</p>
+      </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Rodapé e Contatos -->
+    <footer id="contato">
+        <div class="contato-conteudo">
+            <h2>Vamos construir algo <span class="destaque">juntos?</span></h2>
+            <p>Estou em busca da minha primeira oportunidade no mercado de tecnologia. Se você gostou do meu perfil, entre em contato!</p>
+            
+                        <div class="links-contato">
+                <a href="https://github.com/JucianaSoares" target="_blank" class="link-icone github">GitHub</a>
+                <a href="https://www.linkedin.com/in/juciana-de-souza-soares" target="_blank" class="link-icone linkedin">LinkedIn</a>
+                <a href="https://wa.me/5521976551330?text=Ol%C3%A1%20Juciana,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" class="link-icone whatsapp">WhatsApp</a>
+                <a href="mailto:jucianasoares38@gmail.com" class="link-icone email">E-mail</a>
+            </div>
+
+            
+            <hr class="linha-divisoria">
+            
+            <p class="direitos">&copy; 2026 Juciana Soares. Desenvolvido com orgulho direto do celular.</p>
+        </div>
+    </footer>
+
+<button id="btnTopo" title="Voltar ao topo">↑</button>
+  
+  <script src="js/script.js" defer></script>
+</body>
+</html>

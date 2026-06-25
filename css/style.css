@@ -1,0 +1,617 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+      /* Aumento da intensidade adicionando um tom de roxo mais claro no centro do brilho */
+    background: radial-gradient(circle at 80% 0%, #7c3aed, #4c1d95, #0f0a18);
+    
+    /* Garantindo que o brilho seja bem espalhado e não fique restrito a um ponto pequeno */
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    color: #F3E8FF;
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.6;
+  padding: 0 20px; /* Cria uma margem de segurança nas laterais */
+}
+
+section {
+    margin-bottom: 60px; /* Separa bem uma seção da outra */
+}
+
+/* HEADER MODERNO */
+header {
+    width: 100%;
+    max-width: 1360px;
+    background: rgba(30, 21, 42, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    border-radius: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap; /* Isso permite que os itens pulem para a linha de baixo se não couberem */
+    align-items: center;
+    justify-content: space-between;
+  gap: 15px;
+    padding: 15px 40px;
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+}
+
+header h2 { font-size: 20px; font-weight: 600; }
+
+header nav ul { list-style: none; display: flex; gap: 30px; }
+
+header nav ul li a { color: #E2E8F0; text-decoration: none; font-weight: 500; cursor: pointer;}
+
+header nav ul li a:hover { color: #A78BFA; }
+
+h1, h2, h3 {
+    font-weight: 700; /* Peso grosso para títulos */
+    letter-spacing: -1px; /* Deixa o título mais moderno e impactante */
+    color: #ffffff;
+}
+
+p {
+    font-weight: 300; /* Peso mais leve para facilitar a leitura */
+    line-height: 1.6;
+}
+
+/* Aplica o cursor personalizado para TODOS os links e botões da página */
+a, button {
+    cursor: url('icon/favicon.ico'), pointer !important;
+}
+
+/* SEÇÃO HERO */
+.hero { max-width: 1360px; margin: 100px auto; display: flex; align-items: center; justify-content: space-between; gap: 60px; padding: 0 40px; flex-wrap: wrap; }
+
+.hero-conteudo { flex: 1; min-width: 300px; }
+
+.hero-conteudo h1 { font-size: 52px; margin-bottom: 20px; }
+
+.hero-conteudo .destaque { color: #A78BFA; }
+
+.hero-conteudo p { font-size: 18px; line-height: 1.6; color: #94A3B8; margin-bottom: 35px; max-width: 540px; }
+
+.botao-hero { display: inline-block; background-color: #A78BFA; color: #120E1A; text-decoration: none; padding: 14px 28px; font-size: 16px; font-weight: 600; border-radius: 8px; transition: all 0.3s ease; box-shadow: 0 4px 14px rgba(167, 139, 250, 0.3); }
+
+.botao-hero:hover { background-color: #C084FC; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(167, 139, 250, 0.5); }
+
+.caixa-foto {
+    width: 300px;
+    height: 300px;
+    background-image: url('../imagens/foto.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: none; /* Sem borda, apenas luz */
+    
+    /* Chamada da animação: nome, duração, repetição infinita */
+    animation: pulsar-brilho 2s infinite ease-in-out;
+  transition: all 0.5s ease; /* Isso suaviza a mudança para o hover */
+  outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*  é bom garantir que o foco não crie o retângulo */
+.caixa-foto:focus {
+    outline: none;
+}
+
+/* A lógica da animação */
+@keyframes pulsar-brilho {
+    0% {
+        box-shadow: 0 0 10px 2px rgba(167, 139, 250, 0.4);
+    }
+    50% {
+        /* No meio do caminho, o brilho expande e fica mais forte */
+        box-shadow: 0 0 30px 15px rgba(139, 92, 246, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 10px 2px rgba(167, 139, 250, 0.4);
+    }
+}
+
+.caixa-foto:hover {
+    border-radius: 50%;
+    
+    /* Aumento da intensidade das camadas para o brilho parecer "pulsar" */
+    box-shadow: 
+        0 0 0 8px rgba(167, 139, 250, 0.6), 
+        0 0 30px 15px rgba(139, 92, 246, 0.7),
+        0 0 60px 30px rgba(76, 29, 149, 0.8);
+    
+    transform: scale(1.03);
+  animation: pulsar-brilho 0.8s infinite ease-in-out; /* Fica mais agitado ao passar o mouse */
+    cursor: pointer;
+}
+
+/* SEÇÕES SOBRE, HABILIDADES E PROJETOS */
+.sobre-mim, .habilidades, .projetos, .formacao { max-width: 1360px; margin: 100px auto 0 auto; padding: 0 20px; }
+
+.sobre-mim { background-color: #1E152A; padding: 60px 40px; border-radius: 20px; }
+
+/* Container que organiza as habilidades */
+.cards-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* O retângulo de cada habilidade */
+.card {
+    background-color: #1E152A;
+    border: 1px solid rgba(167, 139, 250, 0.3);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #A78BFA;
+    box-shadow: 0 20px 40px rgba(167, 139, 250, 0.15);
+}
+
+/* Título dentro do retângulo */
+.card h3 {
+    font-size: 20px;
+    color: #A78BFA;
+    margin-bottom: 12px;
+}
+
+/* Parágrafo dentro do retângulo */
+.card p {
+    font-size: 15px;
+    color: #CBD5E1;
+}
+
+/* Aplicando nos  seletores específicos */
+.cards, 
+.cards-habilidades {
+    animation: subir-ao-rolar linear forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+    
+    /* Mantém uma transição para o hover não ficar seco */
+    transition: transform 0.3s ease;
+}
+
+/* Opcional: efeito extra ao passar o mouse */
+.cards:hover, 
+.cards-habilidades:hover {
+    transform: scale(1.02);
+}
+
+/* 2. Projetos (Caixas maiores, mantém 300px) */
+.grade-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* O card agora foca apenas na estrutura e bordas */
+.card-projeto {
+    display: flex;
+    flex-direction: column;
+    background-color: #1E152A; 
+    border: 2px solid #A78BFA;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.8s ease-out;
+}
+
+/* A MÁGICA ESTÁ AQUI: A imagem fica restrita à capa */
+.capa-projeto {
+    width: 100%;
+    height: 180px;
+    background-color: #0d0814; 
+    position: relative;
+    overflow: hidden; /* Garante que nada saia da caixa */
+}
+
+.capa-projeto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Isso garante que a imagem apareça POR INTEIRA */
+    display: block;
+}
+
+.emoji-capa {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: rgba(0,0,0,0.6); /* Um fundo um pouco mais escuro para destacar */
+    padding: 5px;
+    border-radius: 50%;
+    z-index: 10; /* Isso força o emoji a ficar na frente de qualquer outro elemento */
+}
+
+.card-projeto:nth-child(1) { transition-delay: 0.1s; }
+.card-projeto:nth-child(2) { transition-delay: 0.3s; }
+.card-projeto:nth-child(3) { transition-delay: 0.5s; }
+
+.card-projeto:hover { transform: translateY(-8px); border-color: #A78BFA; box-shadow: 0 12px 24px rgba(167, 139, 250, 0.15); }
+
+/* 1. Define a animação de "elevação" */
+@keyframes subir-ao-rolar {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* Já adiciona o brilho aqui para acender automaticamente */
+        border-color: #A78BFA;
+        box-shadow: 0 10px 25px -5px rgba(167, 139, 250, 0.4);
+    }
+}
+
+/* 2. Aplica aos elementos sem usar JS */
+.card-projeto, .item-curso {
+    animation: subir-ao-rolar linear;
+    animation-timeline: view(); /* A mágica: a animação segue a visão do usuário */
+    animation-range: entry 10% cover 30%; /* Controla quando começa e termina */
+}
+
+/* Botão elegante e versátil para qualquer link (Projeto ou GitHub) */
+.botao-projeto {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #A78BFA; /* Borda lilás */
+    color: #A78BFA;           /* Texto lilás */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.card-projeto, .item-curso {
+    background: rgba(45, 35, 65, 0.6); /* Fundo com leve transparência */
+    backdrop-filter: blur(10px); /* O efeito de desfoque (o "vidro") */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(167, 139, 250, 0.3); /* Borda mais sutil */
+}
+
+.card-projeto.ativo, .item-curso.ativo, .cards-habilidades.ativo {
+    box-shadow: 0 0 15px rgba(167, 139, 250, 0.2), 
+                0 0 30px rgba(167, 139, 250, 0.1);
+}
+
+/* Efeito ao passar o mouse */
+.botao-projeto:hover {
+    background-color: #A78BFA; /* Fundo lilás */
+    color: #120E1A;           /* Texto escuro */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3);
+}
+
+.projeto-info {
+    padding: 15px;
+    text-align: center; /* Isso vai centralizar o botão e qualquer texto */
+}
+
+/* O botão já é display: inline-block, então ele respeitará o centralizado */
+.botao-projeto {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px; /* Adiciona um respiro caso você tenha dois botões */
+}
+
+/* 3. Formação (Configuração específica para os cursos) */
+.lista-cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Container que limita o tamanho da imagem dentro do card */
+.caixa-certificado {
+    width: 100%;       /* Ocupa a largura total do card */
+    max-width: 300px;  /* Limita o tamanho máximo para não ficar gigante */
+    margin: 15px auto; /* Centraliza a caixa dentro do item-curso */
+    border-radius: 12px;
+    overflow: hidden;  /* Garante que os cantos da imagem fiquem arredondados */
+    border: 2px solid #3B2E50;
+    transition: transform 0.3s ease;
+}
+
+/* Garante que a imagem preencha a caixa sem distorcer */
+.caixa-certificado img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Efeito de zoom ao passar o mouse no certificado */
+.caixa-certificado:hover {
+    transform: scale(1.02);
+    border-color: #A78BFA;
+}
+
+/* Ajuste específico para o botão que está dentro do item-curso */
+.item-curso .botao-projeto {
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* Estilo do retângulo de cada item de formação */
+.item-curso {
+    background-color: #1E152A; /* Mesma cor dos outros cartões */
+    border: 2px solid #A78BFA; /* Borda lilás */
+    border-radius: 20px;       /* Cantos arredondados */
+    padding: 25px;             /* Espaço interno */
+    margin-bottom: 20px;       /* Espaço entre um curso e outro */
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.item-curso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(167, 139, 250, 0.1);
+}
+
+/* Ajuste dos textos dentro do retângulo */
+.item-curso h3 {
+    margin-top: 0;
+    color: #F3E8FF;
+}
+
+.item-curso p {
+    color: #CBD5E1;
+    margin-bottom: 15px;
+}
+
+/* RODAPÉ E BOTÕES */
+footer {
+    max-width: 1360px;
+    margin: 120px auto 0 auto;
+    padding: 60px 40px;
+    background-color: #1E152A;
+    border-radius: 30px 30px 0 0;
+    text-align: center;
+}
+
+.contato-conteudo {
+    display: flex;
+    flex-direction: column; /* Isso força os itens a ficarem um abaixo do outro */
+    align-items: center;    /* Centraliza tudo horizontalmente */
+    gap: 20px;              /* Espaço automático entre H2, P, Links e Direitos */
+}
+
+.links-contato {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;        /* Quebra linha se os botões não couberem na tela */
+    gap: 15px;
+    margin: 10px 0;         /* Espaço acima e abaixo dos botões */
+}
+
+.linha-divisoria {
+    width: 80%;             /* Uma linha mais curta e elegante */
+    border: 0;
+    border-top: 1px solid rgba(167, 139, 250, 0.2);
+    margin: 10px 0;
+}
+
+.direitos {
+    color: #94A3B8;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Espaçamento do Footer */
+
+/* Ajuste dos links */
+.link-icone { 
+    color: #FFFFFF !important; 
+    text-decoration: none; 
+    padding: 12px 20px; 
+    font-weight: 600; 
+    border-radius: 8px; 
+    transition: all 0.3s ease; 
+}
+
+.link-icone:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+}
+
+.github { background-color: #24292e; }
+.linkedin { background-color: #0077b5; }
+.whatsapp { background-color: #25d366; }
+.email { background-color: #A78BFA; color: #120E1A !important; }
+
+#btnTopo { position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: none; background: #A78BFA; color: #120E1A; border: none; padding: 15px; border-radius: 50%; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+
+/* ANIMAÇÕES E MODO LIGHT */
+* { transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.escondido { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.mostrar { opacity: 1; transform: translateY(0); }
+
+body.light-mode { background: #f8fafc; color: #1e293b; }
+body.light-mode header, body.light-mode .card, body.light-mode.card-projeto, body.light-mode footer { background: #ffffff; border: 1px solid #e2e8f0; }
+
+/* Configuração base dos botões */
+.link-icone, .botao-projeto {
+    position: relative;
+    overflow: hidden; /* Isso garante que o brilho não saia das bordas do botão */
+    background-size: 200% 100%;
+    transition: all 0.4s ease;
+    background-image: linear-gradient(
+        120deg, 
+        rgba(255, 255, 255, 0) 30%, 
+        rgba(255, 255, 255, 0.4) 50%, 
+        rgba(255, 255, 255, 0) 70%
+    );
+}
+
+/* O brilho acontece automaticamente ou no hover */
+.link-icone:hover, .botao-projeto:hover {
+    background-position: -100% 0; /* Move o gradiente de um lado para o outro */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(167, 139, 250, 0.4);
+}
+
+@keyframes brilho-automatico {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+ /* aplicação de brilho, pra brilhar sozinho*/
+.brilho-ativo {
+    animation: brilho-automatico 3s infinite linear;
+}
+
+.btn-tema {
+    background: rgba(167, 139, 250, 0.2); /* Fundo roxo suave */
+    border: 1px solid #A78BFA;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Garante que ele mantenha o formato original */
+}
+
+.btn-tema:hover {
+    background: #A78BFA;
+    transform: scale(1.1);
+}
+
+/* --- Ajustes para o Modo Claro --- */
+
+/* O que acontece quando o tema claro está ativo */
+.light-mode {
+    background: #f0edf4 !important; /* Fundo claro */
+    color: #1a1625 !important;      /* Texto escuro */
+}
+
+/* Quando o body tiver a classe light-mode, muda a cor dos links do header */
+body.light-mode header ul li a {
+    color: #2b1055; /* Um roxo bem escuro para contrastar com o fundo branco */
+}
+
+/* Força o título e o subtítulo a ficarem escuros no modo claro */
+.light-mode h1, 
+.light-mode h2, 
+.light-mode p, 
+.light-mode span 
+.light-mode div {
+    color: #1a1625 !important;
+}
+
+/* Opcional: Ajuste do fundo do card para um branco mais sólido ou cinza bem claro */
+.light-mode .card-projeto, 
+.light-mode .cards-habilidades {
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+}
+/* Fundo da caixa do "Sobre Mim" e texto dentro dele */
+.light-mode .sobre-mim,
+.light-mode .sobre-conteudo,
+.light-mode .sobre-texto {
+    background-color: #f9f7fb !important; /* Um tom de branco quase roxo claro */
+    color: #1a1625 !important;           /* Cor do texto escura */
+}
+
+/* Garante que os títulos e parágrafos dentro dessa caixa também fiquem escuros */
+.light-mode .sobre-mim h2,
+.light-mode .sobre-mim p,
+.light-mode .sobre-mim strong {
+    color: #1a1625 !important;
+}
+
+/* Opcional: Para destacar o nome "Mim" que está com a classe .destaque */
+.light-mode .destaque {
+    color: #6d28d9 !important; /* Um roxo forte para o destaque manter o contraste */
+}
+
+/* Quando o modo claro estiver ativo, muda as caixas da lista de cursos */
+body.light-mode .item-curso {
+    background-color: #f5f0ff; /* Um fundo branco com um leve toque de roxo */
+    color: #2b1055;            /* Texto roxo escuro para dar contraste */
+    border: 1px solid #dcd0ff; /* Uma bordinha suave para destacar as caixas */
+}
+
+/* Quando o modo claro está ativo, muda os títulos h3 da formação para uma cor escura */
+body.light-mode .formacao h3 {
+    color: #2b1055; /* O mesmo roxo escuro para combinar com o menu */
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 480px) {
+  /* Garante que o botão não fique colado no texto do rodapé */
+    #btnTopo {
+        bottom: 80px; /* Aumenta a distância do fundo */
+      right: 15px; /* Um pouco mais afastado da borda */
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    /* Aumenta o espaço interno do rodapé para dar respiro ao texto */
+    footer {
+        padding-bottom: 100px;
+    }
+
+    /* Ajusta o texto de direitos para ficar menor se necessário */
+    .direitos {
+        padding-bottom: 20px;
+    }
+}
+
+/* Media Query para telas de celular (até 480px) */
+@media screen and (max-width: 480px) {
+    header {
+        width: 95% !important;
+        height: auto !important; /* O retângulo cresce conforme o conteúdo */
+        padding: 20px !important;
+        display: flex;
+        flex-direction: column; /* Coloca Nome, Menu e Botão em coluna */
+        align-items: center;
+        gap: 15px;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens pulem de linha */
+        justify-content: center;
+        padding: 0;
+        gap: 10px 15px; /* Espaço entre os links */
+    }
+
+    header nav ul li {
+        list-style: none; /* Remove pontinhos da lista */
+    }
+
+    header nav ul li a {
+        font-size: 0.85rem; /* Ajuste leve para caber melhor */
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero { flex-direction: column; text-align: center; }
+    .caixa-foto { order: -1; width: 250px; height: 250px; }
+}

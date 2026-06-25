@@ -37,7 +37,7 @@ Um dos maiores diferenciais deste projeto está no seu processo de construção.
 
 Você pode visualizar o resultado final do portfólio rodando diretamente no seu navegador. O deploy foi realizado através do GitHub Pages:
 
-🔗 [Clique aqui para acessar o site online](https://JucianaSoares.github.io/Juciana-portifolio/) *(Substitua com o link correto caso mude o repositório)*
+🔗 [Clique aqui para acessar o site online](https://JucianaSoares.github.io/Juciana-portifolio/) 
 
 ---
 
